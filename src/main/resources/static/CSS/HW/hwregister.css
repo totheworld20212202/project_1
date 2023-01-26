@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+#newhw {
+	border:1px solid black;
+	border-radius:5px;
+	background-color:white;
+	color:black;
+	padding:10px;
+	margin-top:5px;
+	font-size:20px;
+	font-weight:bold;
+	position:relative;
+}
+#newhw:hover{
+	color:blue;
+	cursor:pointer;
+}
+
+#newhwregister{
+	padding:20px;
+	border:1px solid green;
+	border-radius:5px;
+	margin-bottom:5px;
+	margin-top:20px;
+	font-size:20px;
+	display:none;
+	background-color:#FDFEFE;
+}
+/************ BEGIN : container **************/
+.hwregister_table{
+	table-layout:fixed;
+}
+.hwregister_table .col1{
+	width:5%;
+}
+.hwregister_table .col2{
+	width:10%;
+}
+.hwregister_table .col3{
+	width:40%;
+}
+.hwregister_table .col4{
+	width:10%;
+}
+.hwregister_table th, td{
+	font-weight:bold;
+	font-size:20px;
+	color:black;
+	padding:10px;
+}  
+.hwregister_table th{
+	background-color:#F5EEF8;
+}
+
+.hwregister_table{
+	border: 1px solid blue;
+} 
+/************ END : container **************/
+
+.addhw{
+	width:90%;
+	 
+}
+.addhwlabel{
+	color:blue;
+	font-weight:bold;
+}
+#registerhw{
+	display:none;
+	border:1px solid black;
+	border-radius:5px;
+	background-color:white;
+	color:black;
+	padding:10px;
+	margin-top:5px;
+	font-size:20px;
+	font-weight:bold;
+	position:relative;
+}
+#registerhw:hover{
+	color:blue;
+	cursor:pointer;
+}

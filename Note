@@ -1,0 +1,78 @@
+프로젝트 이름 : 물리강의
+
+Lecture 
+수강신청 field
+세부사항 field 
+
+
+
+ERROR : lazily initialize  
+	failed to lazily initialize a collection of role: com.lec.spring.domain.User.lectures, 
+	could not initialize proxy - no Session	
+	
+	user에서 lecture를 fetch eager가 없더니, principalDetailService에서 lazily initialize exception이 생겼다.
+	여기에 안에서 findByUsername method가 정상작동을 안하더라. 여기에 user.getLectures()가 동작을 안함. 
+	lectures를 불러오지 못함. 그래서, 여기서(PrincipalDetailService안에 loadUserByUsername(String username)메소드 바로위)
+	@Transactional을 하니까 영속성이 유지됨. 
+	controller에서는 open-in-view (application.properties)에 true가 default여서 영속성이 자동으로 확대되게 해두었더라. 
+	원래 이걸 false로 하면 fetch lazy의 경우 원래는 불러오지 못한다. 
+	PrincipalDetailService도 어쨌든 @Servcice인데 이게보니 @userService를 주입받는다. 그런데, @Service는 @userRepository를 주입받고 
+	자동 영속성 띄었는데 얘는 뭔가 다른 경우여서 영속성이 보장안되는것일수도 있다.  
+	또 희한할걸 발견했는데, @Transactional이 붙을경우, user.getLectures()를 호출을 안해주면 lazy에러가 생겨서 
+	/auth가 안되고
+	호출을해주면 lazy가 없어서 /auth가 작동하더라. 아마도 lazy라는것이 호출이 될때 작동이 되는것이 어서 그런것 같다. 
+	lazy문제 나오면 처음으로 문제가 생기는 method를 찾아가지고 @Transactional 붙이고, 호출한번 해주어야한다. 
+	
+	
+12/09/22
+	(1)HW업로드에서 물리적으로 저장된뒤에 저장되는 파일인 HWSubmittedByStud는 Lecture와 
+	onetomany가 아닌, homework과 onetomany관계가 되어야한다. 	
+	
+	(2) 회원등록기능 (회원등록(0). spring validation아직 안함) 
+	(3) 선생님 권한, 관리자권한 (0), 관리자가 선생님 권한을 주어야함. 
+	(4) 회원 만료기능 
+	https://www.codejava.net/frameworks/spring-boot/spring-security-limit-login-attempts-example
+	(5) 게시판 댓글기능 + 수식 입력 + 이미지와 동영상 삽입 
+	(6) 학생이 직접 수강신청기능 + 결제 
+	(7) 학생의 내 강의실에서 수업영상시청
+	(8) 객관식 채점기능
+	(9) 주관식 숙제 업로드 확인기능 
+	(10) 개설강의 소개를 테이블형태가 아닌 다른형태로 자세히 소개 
+	
+	
+	%%%%%%%%%%%%%%%%%%%%
+	현재가능기능
+	(1) 관리자가 수업개설
+	(2) 관리자가 사용자등록
+	(3) 선생님이 숙제등록
+	(4) 학생이 본인의 수강과목과 숙제조회와 해당되는 숙제를 업로드 
+	
+	
+12/17/22
+	(1) manytomany 관계에서 lecture를 delete할때 user가 있어서 delete이 안된다.
+	sql에서 pp01_user_lectures에 lecture_id를 access해야하는데 그게 안된다.@Query로 repository acceses
+	를 하려했는데 table명으로 접근이 어렵다. 
+	일단은, lecture delete을 할때 false, true중 false로 세팅해서 list에서 제거하는 방식으로 가야겠다. 	
+	
+	(2) 숙제제출에서 lecture지웠는데 해당 과목의 숙제가 뜬다 저것도 제거해야된다. ManyToMany를 날리려면 intermediary table을 날려야겠다. 
+	그다음에 차례대로 날리면 되겠다. 
+	
+12/24/22
+	(1) application.properties 
+		table update -> create	=> all table drop  
+	(2) SecurityConfig.java -> 	.antMatchers("/user/admin/**").access("hasRole('ROLE_ADMIN')")
+								comment the above line. => allow access to admin page 
+	(3) application.properties 
+		table create -> update 							
+	(4) dbeaver -> insert authorities 							
+	(5) go to the admin page. Create the admin id
+	  
+	(6) adminpage admin 권한변경 -> admin 권한 추가 
+	(7) SecurityConfig.java -> 	.antMatchers("/user/admin/**").access("hasRole('ROLE_ADMIN')")
+								uncomment the above line. => don't allow access to admin page 
+	
+		
+	
+	
+	
+	 

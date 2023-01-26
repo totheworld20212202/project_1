@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+ 
+
+/*
+customized sidebar css 
+*/
+.sidebar_customized{
+  position: fixed;
+  top: 10%;
+  bottom: 0;
+  left: 0;
+  padding: 58px 0 0; /* Height of navbar */
+  /*box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);*/
+  
+  width: 300px;
+  /*z-index=-2*/ 
+  opacity:1;	
+}
+
+.sidebar_position{
+	min-height:600px;
+	 
+	/*
+	border:1px solid red;
+	*/
+	background-color: white;
+	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+	 
+}
+.sidebar_position .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+.sidebar_position span{
+	padding : 10px;
+	font-size:25px;
+}

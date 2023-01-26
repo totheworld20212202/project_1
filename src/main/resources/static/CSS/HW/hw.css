@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+.homeworkList{
+	/*
+	display:none;
+	*/
+	 
+}
+/************ BEGIN : container **************/
+#container{
+	/*background-color:#E9F7EF;*/
+	/*height:80%;*/
+	/*
+	background-color:#E9F7EF;
+	*/
+	/*height:100%;*/
+	 
+}
+/************ END : container **************/
+/************ BEGIN : user information **************/
+#user{
+	font-size:30px;
+	font-weight:bold;
+	color:#2E86C1;
+	padding:50px 0px;
+	border:#48C9B0 solid 3px;
+	border-radius:5px;
+	background-color:#EBF5FB;
+	margin-bottom:40px;
+}
+/************ END : user information **************/
+
+/************ BEGIN : CourseList information **************/
+#courselist{
+	 
+	padding: 20px; 
+	border:#48C9B0 solid 3px;
+	border-radius:5px;
+	background-color:#F5EEF8;
+	
+}
+/************ END : CourseList  information **************/
+
+/************ BEGIN : HomeWorkList information **************/
+#homeworklist{
+	 
+	padding: 20px;
+	 
+	border:#48C9B0 solid 3px;
+	border-radius:5px;
+	background-color:#FCF3CF;
+}
+.homework_section{
+	padding: 20px;
+	 
+	border:#48C9B0 solid 3px;
+	border-radius:5px;
+	background-color:#FCF3CF;
+	margin-bottom:50px;
+}
+
+.homework_h1{
+	text-align:center;
+	padding:20px;
+	color:#B45F04;
+	font-weight:bold;
+}
+/************ END : HomeWorkList  information **************/
+
+/************ BEGIN : hw fileupload **************/
+
+.fileupload{
+	display:none;
+}
+.fileupload-button{
+	  
+	  padding: 6px 25px;
+	  background-color:#FF6600;
+	  border-radius: 4px;
+	  color: white;
+	  cursor: pointer;	 
+	   
+}
+.fileupload-button:hover{
+	padding: 6px 25px;
+	background-color:#873600   ;
+	border-radius: 4px;
+	color: white;
+	cursor: pointer;	 
+}
+
+.button-hwsubmit{
+	 padding: 6px 25px;
+	  background-color:#9B59B6;
+	  border-radius: 4px;
+	  color: white;
+	  cursor: pointer;	 
+}
+ 
+/************** END : hw fileupload ***************/ 
+
+ 
+/************** BEGIN : GRIDVIEW ***************/ 
+* {
+	box-sizing: border-box;  /* RWD 필수! */
+}
+[class*="col-"]{
+	float:left;
+	padding:15px;
+	border:1px solid red;
+	 
+}
+.col-1 {width: 8.33%} /* 1칸 짜리 폭 */ 
+.col-2 {width:16.66%} /* 2칸 짜리 폭 */ 
+.col-3 {width:25%} /* 3칸 짜리 폭 */ 
+.col-4 {width:33.33%} /* 4칸 짜리 폭 */ 
+.col-5 {width:41.66%} /* 5칸 짜리 폭 */ 
+.col-6 {width:50%} /* 6칸 짜리 폭 */ 
+.col-7 {width:58.33%} /* 7칸 짜리 폭 */ 
+.col-8 {width:66.66%} /* 8칸 짜리 폭 */ 
+.col-9 {width:75%} /* 9칸 짜리 폭 */ 
+.col-10 {width:83.33%} /* 10칸 짜리 폭 */ 
+.col-11 {width:91.66%} /* 11칸 짜리 폭 */ 
+.col-12 {width:100%} /* 12칸 짜리 폭 */ 
+/************** END : GRIDVIEW ***************/ 

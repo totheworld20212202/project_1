@@ -1,0 +1,264 @@
+@charset "UTF-8";
+#board_table > th, td{
+	padding:20px;
+	color:blue;
+	
+}
+
+table, th, td{
+	border: 1px solid #96D4D4;
+	border-collapse: collapse;
+ 
+	text-align:center;
+/* 
+ 	margin:auto;	
+*/
+	 
+}
+table {
+	width:100%;
+}
+/* 
+자손 선택자는 A B. 여기서 A는 parent, B는 자손 
+자식 선택자는 A > B 여기서 A는 parent, B는 자식 
+*/
+.board_table td:nth-child(2){	
+	color:red;
+	 
+	/* 
+ 	margin-left:40px;
+	margin-right:40px;
+	margin-top: 20px;
+	*/
+}
+.board_table tr:hover{
+	background-color:#FBEFFB;
+}
+.board_table th{
+	font-size:25px;
+	background-color:#EFF2FB;
+}
+.board_table td{
+	font-size:20px;
+	 
+}
+.board_table td:nth-child(4){
+	font-size:15px;
+}
+#board_list {
+	text-align:center;
+	padding:20px;
+	color:#B45F04;
+	font-weight:bold;
+	
+}
+ 
+.div{
+	
+	border:1px solid white;
+	border-radius:15px;
+	background-color:#E0ECF8;
+	 
+}
+.board_table{
+	table-layout:fixed;
+}
+.board_table .col1{
+	width:5%;
+}
+.board_table .col2{
+	width:30%;
+}
+.board_table .col3{
+	width:20%;
+}
+.board_table .col4{
+	width:10%;
+}
+.board_table .col5{
+	width:20%;
+}
+.button{
+	padding: 20px;
+	font-size:22px;
+	font-weight:bold;
+	width:110px;
+	border:1px solid #000000;
+	box-shadow:none;
+	background-color:#FFFFFF;
+	border-radius:12px;
+}
+.button:hover{
+	background-color:#FAFAFA;
+	border:1px solid #000000;
+	
+}
+
+.p-form{
+	font-size: 25px;
+	padding: 10px;
+	font-weight:bold;
+	
+}
+.p-form input {
+	width: 100%;
+	border-radius:10px;
+	height: 1.5cm;
+	border : 1px solid green;
+}
+
+.p-form textarea{
+	/*
+	cols="100%" rows="14" name="content" 
+	padding-right:44px
+	 
+	width:100%;
+	min-height:14cm;
+	border-radius:10px;
+	border:1px solid green;
+	*/
+}
+
+.p-form_after div{
+	width:100%;
+	min-height:14cm;
+	border-radius:10px;
+	border:1px solid green;
+	margin-top:8px;
+	padding:5px;
+}
+
+.ck.ck-editor {
+    max-width: 100%;
+}
+.ck-editor__editable {
+	min-height: 13cm;
+}
+.clear{
+	clear:both;
+}
+.write_info{
+	font-size:20px;
+	color : blue;
+}
+a {
+	text-decoration-line:none;
+	color:blue;
+	font-weight:bold;
+	
+}
+
+#files input{
+	 
+	width:94%;
+	border:1px solid blue;
+	border-radius:10px;
+	 
+}
+#supplements{
+	font-size: 25px;
+	padding: 10px;
+	font-weight:bold;
+	
+}
+ 
+#hw-search{
+	background-color:#E0E6F8;
+	margin-top:50px;
+	border:#48C9B0 solid 3px;
+	min-height:500px;
+	padding: 20px; 
+}
+
+#hw-search label{
+	font-size:25px;
+	font-weight:bold;
+}
+
+
+.searchfield{
+	margin-bottom:10px;	
+}
+/* BEGIN : search by the name of a student */
+	
+	/* Style the search box inside the navigation bar */
+	.topnav input[type=text] {
+	  /*float: right;*/
+	  padding: 6px;
+	  border: light;
+	  border-radius:5px;
+	  margin-top: 8px;
+	  margin-right: 16px;
+	  font-size: 17px;
+	  
+	}
+	
+	/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+	@media screen and (max-width: 600px) {
+	  .topnav a, .topnav input[type=text] {
+	    float: none;
+	    display: block;
+	    text-align: left;
+	    width: 100%;
+	    margin: 0;
+	    padding: 14px;
+	  }
+	  .topnav input[type=text] {
+	    border: 1px solid #ccc;
+	  }
+	}	
+
+/* END : search by the name of a student */ 
+
+.btn-search{
+	background-color:#2E64FE;
+	padding:5px 20px;
+	border-radius:5px;
+	font-size:25px;
+	font-weight:bold;
+	float:right;
+	color:white;
+}
+.btn-search:hover{
+	background-color:#08088A;
+	padding:5px 20px;
+	border-radius:5px;
+	font-size:25px;
+	font-weight:bold;
+	float:right;
+	color:white;
+}
+.select-subject  {
+	padding:9px;
+	font-size:15px;
+	border-radius:5px;
+	width:220px;
+	text-align:center;	 
+}
+
+#select-choose{
+	 
+}
+
+
+
+#search-header{
+	background-color:#FBF2EF;
+	padding:10px;
+	border-radius:5px;
+	box-shadow: 2px 2px 10px 2px  gray ;
+	/*
+	box-shadow: none | x-position y-position blur spread color | inset | initial | inherit
+	none : 그림자 효과를 없앤다.
+	x-position : 가로 위치이다. 양수면 오른쪽에, 음수면 왼쪽에 그림자가 만들어진다. (필수)
+	y-position : 세로 위치이다. 양수면 아래쪽에, 음수면 위쪽에 그림자가 만들어진다. (필수)
+	blur : 그림자를 흐릿하게 만든다. 값이 클 수록 더욱 흐려진다.
+	spread : 양수면 그림자를 확장하고, 음수면 축소한다.
+	color : 그림자 색을 정한다.
+	inset : 그림자를 요소의 안쪽에 만든다.
+	initial : 기본값으로 설정한다.
+	inherit : 부모 요소의 값을 상속받는다.
+	*/
+}
+
+
