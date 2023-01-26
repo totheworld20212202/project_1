@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.regClass{
+	border:1px solid black;
+	border-radius:5px;
+	background-color:#D6EAF8;
+	padding:10px;
+	float:left;
+	font-weight:bold;
+	font-size:25px;
+	
+}
+.regClass:hover{
+	background-color:#A9DFBF;
+	cursor:pointer;
+}

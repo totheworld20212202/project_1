@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/************ BEGIN : container **************/
+.searchUserBySubjects_Table{
+	table-layout:fixed;
+}
+.searchUserBySubjects_Table .col1{
+	width:5%;
+}
+.searchUserBySubjects_Table .col2{
+	width:10%;
+}
+.searchUserBySubjects_Table .col3{
+	width:10%;
+}
+.searchUserBySubjects_Table .col4{
+	width:20%;
+}
+.searchUserBySubjects_Table .col5{
+	width:20%;
+}
+.searchUserBySubjects_Table .col6{
+	width:20%;
+}
+.searchUserBySubjects_Table .col7{
+	width:20%;
+}
+.searchUserBySubjects_Table th, td{
+	font-weight:bold;
+	font-size:20px;
+	color:black;
+	padding:10px;
+	text-align:center;
+}  
+.searchUserBySubjects_Table th{
+	background-color:#F5EEF8;
+}
+
+.searchUserBySubjects_Table{
+	border: 1px solid blue;
+} 
+/************ END : container **************/
