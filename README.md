@@ -1,5 +1,2 @@
 # test_project
-home : localhost:8080/home, id/password: 
-admin : 1234 
-teacher1 : 1234 
-user3 : 1234
+프로젝트 시현 powerpoint자료가 위의 폴더에 있습니다. 
